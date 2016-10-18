@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>testing</title>
+	<!-- <link rel="js" type="text/js" href="test.js"> -->
+	<link rel="stylesheet" type="text/css" href="test.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	
+$(window).on("load",function() {
+  $(window).scroll(function() {
+    $(".fade").each(function() {
+      /* Check the location of each desired element */
+      var objectBottom = $(this).offset().top + $(this).outerHeight();
+      var windowBottom = $(window).scrollTop() + $(window).innerHeight();
+      
+      /* If the element is completely within bounds of the window, fade it in */
+      if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+        if ($(this).css("opacity")==0) {$(this).fadeTo(500,0.8);}
+      } else { //object goes out of view (scrolling up)
+        if ($(this).css("opacity")==0.8) {$(this).fadeTo(500,0);}
+      }
+    });
+  }); $(window).scroll(); //invoke scroll-handler on page-load
+});
+</script>
+
+<script type="text/javascript">
+	function isScrolledIntoView($elem) {
+   var docViewTop = $(window).scrollTop();
+   var docViewBottom = docViewTop + $(window).height();
+
+   var elemTop = $elem.offset().top;
+   var elemMiddle = elemTop + $elem.height()/2;
+   return docViewBottom >= elemMiddle && docViewTop <= elemMiddle;
+}
+$(window).scroll(function(){
+   $elem = $("brady"); //or what element you like
+   if(isScrolledIntoView($elem)){
+      $elem.css('background-image','url("img/background.jpg")').fadeIn();
+   }
+});
+
+</script>
+
+
+</head>
+<body>
+
+<section class="brady">
+<div>
+  <div class="fade"><p>I know this is going to sound crazy, beleive me, I wouldn't beleive any of this if it hadn't happened to me. I was never one to get spooked by the ideas of ghost or the paranormal, hell, I didn't think any of it even existed. But it all changed that night.</p></div>
+
+<br>
+
+  <div class="fade"><p>It all started as an innocent enough night. Some friends had gathered together after a week of exams. We were all worn out, and had maybe a few too many drinks.</p></div>
+
+<br>
+
+  <div class="fade"><p>Now one of my friends, let's call her Jill, was always a scardey cat, and with Halloween coming up, we decided to step things up with our normal pranks on her. We had found an old oni mask in an antique store a few days earlier, and just looking at it was enough to give me the creeps. Even though it was made of wood, the thing almost looked real, at least as far as a depiciton of an evil spirit can go. The mouth was twisted into a cruel smile, the skin blood red, but the eyes were the worst part. Though the eyes had holes so the wearer could see out of it, I swear the thing was watching us. I hated it, so it was perfect for the prank.</p></div>
+
+<br>
+
+  <div class="fade"><p>Typically, me and all my friends get super excited about pranks. Especially towards Jill. However, instead of thinking about Jill's frightened reaction, we thought about the mask. Who used to own it? Where did it come from? The thoughts were never ending.</p></div>
+
+<br>
+
+  <div class="fade"><p>I thought it was just me at first, but whenever I was in the room with the mask I felt the temperature drop. I had a feeling it was something about the mask - it had been giving me erie vibes from the start. I knew my friends would think im crazy if I brought that up though. After some more time passed, I noticed goosebumps and chills on all my friends arms and legs. Our air conditioner was broken and it was a pretty warm night. There was more to this mask then any of us originally expected. </p></div>
+  <div class="fade">Fade In 06</div>
+  <div class="fade">Fade In 07</div>
+  <div class="fade">Fade In 08</div>
+  <div class="fade">Fade In 09</div>
+  <div class="fade">Fade In 10</div>
+</div>
+
+
+
+</body>
+</html>
+
+
+
